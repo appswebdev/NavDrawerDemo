@@ -80,9 +80,16 @@ public class MainActivity extends AppCompatActivity
                             ColorFragment.newInstance(0xff00ff00)).
                     commit();
         } else if (id == R.id.nav_gallery) {
+
+
             getSupportFragmentManager().beginTransaction().
-                    replace(R.id.container, new ListenerFragment()).
+                    replace(
+                            R.id.container,
+                            new ListenerFragment()
+                    ).
                     commit();
+
+
         } else if (id == R.id.nav_slideshow) {
             getSupportFragmentManager().beginTransaction().
                     replace(R.id.container, new FactoryFragment()).
